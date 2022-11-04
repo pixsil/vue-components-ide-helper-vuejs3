@@ -1,4 +1,8 @@
+
+This is a fork of https://github.com/BenceSzalai/vue-components-ide-helper. And changed to work with VueJs 3.
+
 # Vue Components IDE Helper
+
 Can be used to generate JS import and Vue.component() statements for all files in a folder.
 
 ## Explanation
