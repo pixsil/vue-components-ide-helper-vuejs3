@@ -27,8 +27,8 @@ const getDirectories = function (src, callback) {
 // Need to generate this:
 /*
 import ComponentName     from '../src/components/global/ComponentName'
-export default async ({ Vue }) => {
-  Vue.component('ComponentName',     ComponentName)
+export default async (app ) => {
+  app.component('ComponentName',     ComponentName)
 }
 */
 
@@ -65,7 +65,7 @@ getDirectories(options.sources, function (err, file_paths) {
 
   })
 
-  var output = `//THIS FILE IS GENERATED AUTOMATICALLY. DO NOT EDIT!\n\n${imports}\nexport default async ({ Vue }) => {\n${registrations}}`
+  var output = `//THIS FILE IS GENERATED AUTOMATICALLY. DO NOT EDIT!\n\n${imports}\nexport default async ( app ) => {\n${registrations}}`
 
   fs.writeFile(options.output, output, function(err) {
     if(err) {
