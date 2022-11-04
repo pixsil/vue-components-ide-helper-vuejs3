@@ -61,7 +61,7 @@ getDirectories(options.sources, function (err, file_paths) {
     }
 
     imports       += `import ${componentName} from '${path}'\n`
-    registrations += `  Vue.component('${componentName}', ${componentName})\n`
+    registrations += `  app.component('${componentName}', ${componentName})\n`
 
   })
 
